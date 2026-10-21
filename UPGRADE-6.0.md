@@ -9,3 +9,9 @@ If your User class extends `Sonata\UserBundle\Entity\BaseUser`, please extend
 
 Make sure you run your migrations after the change.
 
+
+## `TokenGenerator` is final
+
+The `Sonata\UserBundle\Util\TokenGenerator` class is now `final`.
+If you extend it, implement `Sonata\UserBundle\Util\TokenGeneratorInterface` instead
+and register your service under the `sonata.user.util.token_generator` id.
