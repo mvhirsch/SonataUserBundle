@@ -15,3 +15,10 @@ Make sure you run your migrations after the change.
 The `Sonata\UserBundle\Util\TokenGenerator` class is now `final`.
 If you extend it, implement `Sonata\UserBundle\Util\TokenGeneratorInterface` instead
 and register your service under the `sonata.user.util.token_generator` id.
+
+
+## `GlobalVariablesCompilerPass` is final
+
+The `Sonata\UserBundle\DependencyInjection\Compiler\GlobalVariablesCompilerPass` class is now `final`.
+If you extend it, register your own compiler pass in your bundle instead
+and add the `sonata_user` Twig global there.
